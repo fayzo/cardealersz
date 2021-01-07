@@ -26,7 +26,7 @@ $(document).ready(function () {
         var house_view = $(this).data('house');
 
         $.ajax({
-            url: 'core/ajax_db/house_addcategories.php',
+            url: 'core/ajax_db/house_addcategories',
             method: 'POST',
             dataType: 'text',
             data: {
@@ -37,7 +37,7 @@ $(document).ready(function () {
                 $(".house-popup").hide();
                 
                 });
-                console.log(response);
+                // console.log(response);
             }
         });
     });
@@ -51,7 +51,7 @@ $(document).ready(function () {
         var house_view = $(this).data('house');
 
         $.ajax({
-            url: 'core/ajax_db/property_request_add.php',
+            url: 'core/ajax_db/property_request_add',
             method: 'POST',
             dataType: 'text',
             data: {
@@ -61,7 +61,7 @@ $(document).ready(function () {
                 $(".close-imagePopup").click(function () {
                 $(".house-popup").hide();
                 });
-                console.log(response);
+                // console.log(response);
             }
         });
     });
@@ -72,7 +72,7 @@ $(document).ready(function () {
         var contacts_business = $(this).data('contacts');
 
         $.ajax({
-            url: 'core/ajax_db/contact.php',
+            url: 'core/ajax_db/contact',
             method: 'POST',
             dataType: 'text',
             data: {
@@ -82,7 +82,7 @@ $(document).ready(function () {
                 $(".close-imagePopup").click(function () {
                 $(".house-popup").hide();
                 });
-                console.log(response);
+                // console.log(response);
             }
         });
     });
@@ -94,7 +94,7 @@ $(document).ready(function () {
         var user_id = $(this).data('user');
 
         $.ajax({
-            url: 'core/ajax_db/contact.php',
+            url: 'core/ajax_db/contact',
             method: 'POST',
             dataType: 'text',
             data: {
@@ -105,7 +105,7 @@ $(document).ready(function () {
                 $(".close-imagePopup").click(function () {
                 $(".house-popup").hide();
                 });
-                console.log(response);
+                // console.log(response);
             }
         });
     });
@@ -116,7 +116,7 @@ $(document).ready(function () {
         var car_id = $(this).data('car');
 
         $.ajax({
-            url: 'core/ajax_db/property-readmore.php',
+            url: 'core/ajax_db/property-readmore',
             method: 'POST',
             dataType: 'text',
             data: {
@@ -126,7 +126,7 @@ $(document).ready(function () {
                 $(".close-imagePopup").click(function () {
                     $(".house-popup").hide();
                 });
-                console.log(response);
+                // console.log(response);
             }
         });
     });
@@ -136,7 +136,7 @@ $(document).ready(function () {
         var user_id = $(this).data('user');
 
         $.ajax({
-            url: 'core/ajax_db/property-readmore.php',
+            url: 'core/ajax_db/property-readmore',
             method: 'POST',
             dataType: 'text',
             data: {
@@ -148,7 +148,7 @@ $(document).ready(function () {
                 $(".close-imagePopup").click(function () {
                     $(".house-popup").hide();
                 });
-                console.log(response);
+                // console.log(response);
             }
         });
     });
@@ -202,7 +202,7 @@ $(document).ready(function () {
                 return false;
             } else {
                 $.ajax({
-                    url: 'core/ajax_db/house_addcategories.php',
+                    url: 'core/ajax_db/house_addcategories',
                     method: "POST",
                     data: form_id.serializefiles(),
                     contentType: false,
@@ -237,7 +237,7 @@ $(document).ready(function () {
                             if (user_id.val() == 4 || register.val() == 'Buyer') {
 
                                 $.ajax({
-                                    url: 'core/ajax_db/mtn_payment.php',
+                                    url: 'core/ajax_db/mtn_payment',
                                     method: 'POST',
                                     dataType: 'text',
                                     data: {
@@ -251,7 +251,7 @@ $(document).ready(function () {
                                         $(".close-imagePopup").click(function () {
                                             $(".house-popup").hide();
                                         });
-                                        console.log(response);
+                                        // console.log(response);
                                     }
                                 });
                         
@@ -325,7 +325,7 @@ $(document).ready(function () {
                 return false;
             } else {
                 $.ajax({
-                    url: 'core/ajax_db/house_addcategories.php',
+                    url: 'core/ajax_db/house_addcategories',
                     method: "POST",
                     data: form_id.serializefiles(),
                     contentType: false,
@@ -359,7 +359,7 @@ $(document).ready(function () {
                             if (user_id.val() == 4 || register.val() == 'Buyer') {
 
                                 $.ajax({
-                                    url: 'core/ajax_db/mtn_payment.php',
+                                    url: 'core/ajax_db/mtn_payment',
                                     method: 'POST',
                                     dataType: 'text',
                                     data: {
@@ -373,7 +373,7 @@ $(document).ready(function () {
                                         $(".close-imagePopup").click(function () {
                                             $(".house-popup").hide();
                                         });
-                                        console.log(response);
+                                        // console.log(response);
                                     }
                                 });
 
@@ -406,7 +406,7 @@ $(document).ready(function () {
         if (isEmpty(name) && isEmpty(email) &&  isEmpty(phone) && isEmpty(message)) {
          
             $.ajax({
-                    url: 'core/ajax_db/property-readmore.php',
+                    url: 'core/ajax_db/property-readmore',
                     method: "POST",
                     data: form_id.serialize(),
                     success: function (response) {
@@ -439,7 +439,7 @@ $(document).ready(function () {
         if (isEmpty(email)) {
          
             $.ajax({
-                    url: 'core/ajax_db/property-readmore.php',
+                    url: 'core/ajax_db/property-readmore',
                     method: "POST",
                     data: form_id.serialize(),
                     success: function (response) {
@@ -467,7 +467,7 @@ $(document).ready(function () {
         e.stopPropagation();
         var house_id = $(this).data('fund');
         $.ajax({
-            url: 'core/ajax_db/houseImageViewPopup.php',
+            url: 'core/ajax_db/houseImageViewPopup',
             method: 'POST',
             dataType: 'text',
             data: {
@@ -477,7 +477,7 @@ $(document).ready(function () {
                 $(".close-imagePopup").click(function () {
                     $(".img-popup").hide();
                 });
-                console.log(response);
+                // console.log(response);
             }
         });
     });
@@ -506,7 +506,7 @@ function client_business(key) {
     ) {
         //    alert("complete register");
         $.ajax({
-            url: 'core/ajax_db/contact.php',
+            url: 'core/ajax_db/contact',
             method: "POST",
             dataType: "text",
             data: {
@@ -525,7 +525,7 @@ function client_business(key) {
             },
             success: function(response) {
                 $("#responses").html(response);
-                console.log(response);
+                // console.log(response);
                 if (response.indexOf('SUCCESS') >= 0) {
                     setInterval(() => {
                         // window.location.reload();
@@ -534,7 +534,7 @@ function client_business(key) {
                             if (user_id.val() == 4 || register.val() == 'Buyer') {
 
                                 $.ajax({
-                                    url: 'core/ajax_db/mtn_payment.php',
+                                    url: 'core/ajax_db/mtn_payment',
                                     method: 'POST',
                                     dataType: 'text',
                                     data: {
@@ -548,7 +548,7 @@ function client_business(key) {
                                         $(".close-imagePopup").click(function () {
                                             $(".house-popup").hide();
                                         });
-                                        console.log(response);
+                                        // console.log(response);
                                     }
                                 });
 
@@ -576,7 +576,7 @@ function contact_business(key) {
     ) {
         //    alert("complete register");
         $.ajax({
-            url: 'core/ajax_db/contact.php',
+            url: 'core/ajax_db/contact',
             method: "POST",
             dataType: "text",
             data: {
@@ -588,7 +588,7 @@ function contact_business(key) {
             },
             success: function(response) {
                 $("#responses").html(response);
-                console.log(response);
+                // console.log(response);
                 if (response.indexOf('SUCCESS') >= 0) {
                     setInterval(() => {
                         window.location.reload();
@@ -629,7 +629,7 @@ function property_request(key) {
     ) {
         //    alert("complete register");
         $.ajax({
-            url: 'core/ajax_db/property_request_add.php',
+            url: 'core/ajax_db/property_request_add',
             method: "POST",
             dataType: "text",
             data: {
@@ -653,10 +653,10 @@ function property_request(key) {
             },
             success: function(response) {
                 $("#responses").html(response);
-                console.log(response);
+                // console.log(response);
                 if (response.indexOf('SUCCESS') >= 0) {
                     setInterval(() => {
-                        // window.location = '../index.php';
+                        // window.location = '../index';
                         // location.reload();
                     }, 1500);
                 }else {
@@ -688,8 +688,8 @@ function isEmptys(caller) {
 }
  // var params = '?user_id='+user_id.val()+'&name='+name_client_.val()+
                         // '&phone='+ phone_client_.val()+'&register='+register.val();
-                        // var url = 'core/ajax_db/mtn_payment.php' +params;
-                        // var url = 'core/ajax_db/mtn_payment.php';
+                        // var url = 'core/ajax_db/mtn_payment' +params;
+                        // var url = 'core/ajax_db/mtn_payment';
                         // var server = window.location.hostname;
                         // var pathname = window.location.pathname;
 

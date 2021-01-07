@@ -1595,7 +1595,8 @@ ul, ol {
 		height: auto;
 	}
 	.single-property-item .property-text {
-		padding-top: 30px;
+		/* padding-top: 30px; */
+		position: relative;
 	}
 	.tag-share-option .tags {
 		float: none;
